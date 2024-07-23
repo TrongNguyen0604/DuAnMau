@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>y1</title>
-    <link rel="stylesheet" href="y1.css">
+    <title>Dự Án Mẫu</title>
+    <link rel="stylesheet" href="list.css">
     <script src="https://kit.fontawesome.com/3efea8ee37.js" crossorigin="anonymous"></script>
 </head>
     
@@ -32,12 +32,12 @@
                     <i class="fas fa-bars menu-button"></i>
                     <div class="menu-content">
                         <a href="#item1">Danh sách danh mục</a>
-                        <a href="#item2">Thêm sản phẩm</a>
+                        <a href="?act=create-course">Thêm sản phẩm</a>
                         <a href="#item3">Thêm danh mục</a>
                         <a href="#item4">Danh sách sản phẩm</a>
                         </div>
                     </div>
-                <script src="scripts.js"></script>
+                <script src="menu.js"></script>
               
             </div>
         </nav>

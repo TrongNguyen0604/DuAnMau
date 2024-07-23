@@ -27,7 +27,7 @@ nav {
 .menu {
     position: relative;
     display: inline-block;
-  
+
 }
 
 .menu-content {
@@ -97,7 +97,7 @@ nav {
 }
 
 .search i {
-    margin: 4px; 
+    margin: 4px;
 
 }
 
@@ -142,25 +142,82 @@ nav a {
 
 }
 
-.sp {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 
+
+/* ______SẢN PHẨM_____ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.sp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.anh1 {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    margin: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Optional: border for the div */
+    border-radius: 8px; /* Optional: rounded corners */
+    transition: transform 0.3s ease;
 }
 
 .anh1 img {
     width: 100%;
-    margin: 25px 7px;
-
-
+    border-bottom: 1px solid #ddd; /* Optional: border for the image */
+    transition: transform 0.3s ease;
 }
 
-.gia {
-    font-size: 25px;
+.anh1 .gia {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     text-align: center;
-    margin: 15px 10px;
-
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
 }
+
+.anh1 .gia h3 {
+    margin: 5px 0;
+    color: #333; /* Price text color */
+}
+
+/* Hover effects */
+.anh1:hover {
+    transform: scale(1.05);
+}
+
+.anh1:hover img {
+    transform: scale(1.1);
+}
+
+.anh1:hover .gia {
+    background: rgba(255, 255, 255, 1); /* Fully opaque background on hover */
+}
+
+
+
+
+
+
+
+
+
+
+/* ________________ */
+
+
+
+
 
 footer {
     height: 500px;
