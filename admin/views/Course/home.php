@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Trang chủ </title>
     <link rel="stylesheet" href="list.css">
     <script src="https://kit.fontawesome.com/3efea8ee37.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="sanpham.css">
@@ -14,10 +12,12 @@
     
 <body>
     <div id="layout">
-        <hr>
+      
         <nav class="tong">
-           
-            <a class="Shopping" href="?act=home-course">Shopping Cart</a>
+            <!-- <div class="logo">
+                <img src="img/LOGO.jpg" alt="" width="60px">
+            </div> -->
+            <a class="Shopping" href="">Shopping Cart</a>
             <div class="menumid">
                 <ul>
                 <a href="?act=home-course">Home</a>
@@ -35,10 +35,10 @@
                 <div class="menu">
                     <i class="fas fa-bars menu-button"></i>
                     <div class="menu-content">
-                        <a href="?act=home-course">Trang chủ</a>
+                        <a href="#item1">Trang chủ</a>
                         <a href="?act=create-course">Thêm sản phẩm</a>
                         <a href="#item3">Thêm danh mục</a>
-                        <a href="#item4">Danh sách sản phẩm</a>
+                        <a href="?act=list-course">Danh sách sản phẩm</a>
                         </div>
                     </div>
                 <script src="menu.js"></script>
@@ -50,54 +50,38 @@
             <!-- <div class="banner">
                 <img src="img/banner.jpg" alt=""> 
             </div> -->
-            <!-- <div class="banner">
+           <div class="banner">
                 <form action="1.php">
 
                 </form>
             </div>
             <div class="recently">
                 Recently Added Products
-            </div> -->
+            </div> 
           
-
-            <div class="container">
-            <div class="row">
-            <h1>Danh sách sản phẩm</h1>
-            <a href="?act=create-course"  class="btn btn-primary">Tạo sản phẩm </a>
-        </div>
-        <table class="table table-striped" >
-        <tr>
-            <th>Đinh danh</th>
-            <th>Tên sản phẩm</th>
-            <th>Hình ảnh sản phảm</th>
-            <th>Giá gốc</th>
-            <th>Giá sell</th>
-            <th>.</th>
-            <th>Thao tác</th>
-        </tr>
-        <?php
-        foreach ($listCourse as $course) {
-        ?>
-            <tr>
-                <td><?= $course['id'] ?></td>
-                <td><?= $course['name'] ?></td>
-                <td><?= $course['thumbnail'] ?></td>
-                <td><?= $course['instructor'] ?></td>
-                <td><?= $course['duration'] ?></td>
-                <td><?= $course['price'] ?></td>
-                <td>
-                    <a href="?act=delete-course&id=<?= $course['id'] ?>" onclick="return confirm('Bạn có muốn xóa không?')"  class="btn btn-danger">Xóa</a>
-                    <a href="?act=update-course&id=<?= $course['id'] ?>" onclick="return confirm('Bạn có muốn sửa không?')" class="btn btn-primary" >Sửa</a>
-                </td>
-            </tr>
-        <?php
-        }
-        ?>
-    </table>
+            <div class="sp">
+        <?php foreach ($listCourse as $course) { ?>
+            <div class="anh1">
+                <img src="img/dongho.png" alt="">
+                <div class="gia">
+                   <div class="name"><?= $course['name']?></div>      <!-- //tên -->
+                    <h3>
+                    <del>
+                        <?= $course['duration']?> $       <!-- //giá  sell   -->
+                    </del>
+                        <?= $course['instructor']?> $  <!-- //giá gốc    -->                     
+                    </h3>
+                </div>
+              <div class="buy">
+                       <button type="submit">Mua</button>
+              </div>
+            </div>
+        <?php } ?>
+    </div>
     </div>
         </article>
         <hr>
-       <footer>
+        <footer>
             <div>
                 <h3>Địa chỉ : 88/955E Lê Đức Thọ Phường 6 Quận Gò Vấp, Thành Phố Hồ Chí Minh <br>
 
@@ -109,7 +93,7 @@
             <div class="fb">
                 <img src="img/Screenshot 2024-03-23 040733.png" alt="">
             </div>
-        </footer> 
+        </footer>
 
     </div>
 </body>
