@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo sản phẩm</title>
+    <title>chỉnh sửa</title>
     <link rel="stylesheet" href="create.css">
     <script src="https://kit.fontawesome.com/3efea8ee37.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="list.css">
 </head>
 
 <body>
@@ -32,13 +31,13 @@
                 <div class="menu">
                     <i class="fas fa-bars menu-button"></i>
                     <div class="menu-content">
-                        <a href="?act=home-course">Trang chủ</a>
+                        <a href="#item1">Danh sách danh mục</a>
                         <a href="?act=create-course">Thêm sản phẩm</a>
                         <a href="#item3">Thêm danh mục</a>
-                        <a href="?act=list-course">Danh sách sản phẩm</a>
+                        <a href="#item4">Danh sách sản phẩm</a>
                         </div>
                     </div>
-                <script src="menu.js"></script>
+                <script src="scripts.js"></script>
               
             </div>
         </nav>
@@ -46,27 +45,28 @@
         
     <div class="container">
         <div class="row">
-            <h1>Tạo sản phẩm</h1>
-            <form action="?act=create-post" method="post">
+            <h1>Sửa sản phẩm</h1>
+          
+            <form action="?act=update-post&id=<?php echo $userEdit['id'] ?>" method="post" enctype="multipart/form-data" >
              <div >
                 <label class="form-label">Tên sản phẩm</label>
-                <input type="text" class="form-control" name="name">
+                <input type="text" class="form-control" name="name" value="<?php echo $courseEdit['name'] ?>" >
              </div>
              <div >
                 <label class="form-label">Hình ảnh sản phẩm </label>
-                <input type="file" class="form-control" name="thumbnail">
+                <input type="file" class="form-control" name="thumbnail" value="<?php echo $courseEdit['thumbnail'] ?>">
              </div>
              <div >
                 <label class="form-label">Giá gốc sản phẩm</label>
-                <input type="number" class="form-control" name="price">
+                <input type="number" class="form-control" name="price" value="<?php echo $courseEdit['price'] ?>">
              </div>
              <div >
                 <label class="form-label">Giá sell</label>
-                <input type="number" class="form-control" name="instructor">
+                <input type="number" class="form-control" name="instructor" value="<?php echo $courseEdit['instructor'] ?>">
              </div>
              <div >
                 <label class="form-label">Thời lượng khóa học</label>
-                <input type="number" class="form-control" name="duration">
+                <input type="number" class="form-control" name="duration" value="<?php echo $courseEdit['duration'] ?>">
              </div>
             
              <button type="submit" class="btn btn-primary">submit</button>
