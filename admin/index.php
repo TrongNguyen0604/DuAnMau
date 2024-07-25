@@ -24,10 +24,11 @@ $act = $_GET['act'] ?? '/';
 match ($act) {
     // Trang chủ
     '/' => (new DashboardController)->dashboard(),
-    'list-course' => (new courseController)->list(),
+     'list-course' => (new courseController)->list(),
      'delete-course' => (new courseController)->delete(),
      'create-course' => (new courseController)->create(),
      'create-post'  => (new courseController)->createPost(),
-     
-    
+     'update-course'  => (new courseController)->update(),
+     'update-post'=>(new courseController)->UpdatePost(),
+     'home-course' => (new courseController)->home(),
 };
